@@ -60,6 +60,7 @@ if TYPE_CHECKING:
 
     from deebot_client.command import Command, SetCommand
     from deebot_client.events.efficiency_mode import EfficiencyMode, EfficiencyModeEvent
+    from deebot_client.events.mop_wash_frequency import MopWashFrequency, MopWashFrequencyEvent
     from deebot_client.models import CleanAction, CleanMode
 
 
@@ -193,6 +194,9 @@ class CapabilitySettings:
     child_lock: CapabilitySetEnable[ChildLockEvent] | None = None
     cut_direction: CapabilitySet[CutDirectionEvent, int] | None = None
     moveup_warning: CapabilitySetEnable[MoveUpWarningEvent] | None = None
+    mop_wash_frequency: CapabilitySetTypes[MopWashFrequencyEvent, MopWashFrequency] | None = (
+        None
+    )
     cross_map_border_warning: CapabilitySetEnable[CrossMapBorderWarningEvent] | None = (
         None
     )
