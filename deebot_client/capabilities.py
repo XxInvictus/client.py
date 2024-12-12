@@ -32,6 +32,8 @@ from deebot_client.events import (
     MajorMapEvent,
     MapChangedEvent,
     MapTraceEvent,
+    MopWashFrequency,
+    MopWashFrequencyEvent,
     MoveUpWarningEvent,
     MultimapStateEvent,
     NetworkInfoEvent,
@@ -60,7 +62,6 @@ if TYPE_CHECKING:
 
     from deebot_client.command import Command, SetCommand
     from deebot_client.events.efficiency_mode import EfficiencyMode, EfficiencyModeEvent
-    from deebot_client.events.mop_wash_frequency import MopWashFrequency, MopWashFrequencyEvent
     from deebot_client.models import CleanAction, CleanMode
 
 
