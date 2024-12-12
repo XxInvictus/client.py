@@ -175,6 +175,16 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
                 [GetCarpetAutoFanBoost()],
                 SetCarpetAutoFanBoost,
             ),
+            mop_wash_frequency=CapabilitySetTypes(
+                event=MopWashFrequencyEvent,
+                get=[GetMopWashFrequency()],
+                set=SetMopWashFrequency,
+                types=(
+                    MopWashFrequency.TEN_MINUTES,
+                    MopWashFrequency.FIFTEEN_MINUTES,
+                    MopWashFrequency.TWENTY_FIVE_MINUTES,
+                ),
+            ),
             true_detect=CapabilitySetEnable(
                 TrueDetectEvent, [GetTrueDetect()], SetTrueDetect
             ),
@@ -195,16 +205,6 @@ DEVICES[short_name(__name__)] = StaticDeviceInfo(
                 WaterAmount.MEDIUM,
                 WaterAmount.HIGH,
                 WaterAmount.ULTRAHIGH,
-            ),
-        ),
-        mop_wash_frequency=CapabilitySetTypes(
-            event=MopWashFrequencyEvent,
-            get=[GetMopWashFrequency()],
-            set=SetMopWashFrequency,
-            types=(
-                MopWashFrequency.TEN_MINUTES,
-                MopWashFrequency.FIFTEEN_MINUTES,
-                MopWashFrequency.TWENTY_FIVE_MINUTES,
             ),
         ),
     ),

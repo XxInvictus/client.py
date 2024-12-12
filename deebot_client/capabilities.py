@@ -202,6 +202,9 @@ class CapabilitySettings:
     ota: CapabilitySetEnable[OtaEvent] | CapabilityEvent[OtaEvent] | None = None
     sweep_mode: CapabilitySetEnable[SweepModeEvent] | None = None
     true_detect: CapabilitySetEnable[TrueDetectEvent] | None = None
+    mop_wash_frequency: CapabilitySetTypes[MopWashFrequencyEvent, MopWashFrequency] | None = (
+        None
+    )
     voice_assistant: CapabilitySetEnable[VoiceAssistantStateEvent] | None = None
     volume: CapabilitySet[VolumeEvent, int]
 
@@ -221,9 +224,6 @@ class Capabilities(ABC):
     fan_speed: CapabilitySetTypes[FanSpeedEvent, FanSpeedLevel] | None = None
     life_span: CapabilityLifeSpan
     map: CapabilityMap | None = None
-    mop_wash_frequency: CapabilitySetTypes[MopWashFrequencyEvent, MopWashFrequency] | None = (
-        None
-    )
     network: CapabilityEvent[NetworkInfoEvent]
     play_sound: CapabilityExecute
     settings: CapabilitySettings
