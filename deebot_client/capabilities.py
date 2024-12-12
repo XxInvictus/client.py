@@ -195,9 +195,6 @@ class CapabilitySettings:
     child_lock: CapabilitySetEnable[ChildLockEvent] | None = None
     cut_direction: CapabilitySet[CutDirectionEvent, int] | None = None
     moveup_warning: CapabilitySetEnable[MoveUpWarningEvent] | None = None
-    mop_wash_frequency: CapabilitySetTypes[MopWashFrequencyEvent, MopWashFrequency] | None = (
-        None
-    )
     cross_map_border_warning: CapabilitySetEnable[CrossMapBorderWarningEvent] | None = (
         None
     )
@@ -224,6 +221,9 @@ class Capabilities(ABC):
     fan_speed: CapabilitySetTypes[FanSpeedEvent, FanSpeedLevel] | None = None
     life_span: CapabilityLifeSpan
     map: CapabilityMap | None = None
+    mop_wash_frequency: CapabilitySetTypes[MopWashFrequencyEvent, MopWashFrequency] | None = (
+        None
+    )
     network: CapabilityEvent[NetworkInfoEvent]
     play_sound: CapabilityExecute
     settings: CapabilitySettings
