@@ -19,7 +19,7 @@ if TYPE_CHECKING:
 class GetMopWashFrequency(JsonGetCommand):
     """Get Mop Auto-Wash Frequency command."""
 
-    name = "getWashInterval"
+    name = "getWashInfo"
 
     @classmethod
     def _handle_body_data_dict(
@@ -36,7 +36,7 @@ class GetMopWashFrequency(JsonGetCommand):
 class SetMopWashFrequency(JsonSetCommand):
     """Set Mop Auto-Wash Frequency command."""
 
-    name = "setWashInterval"
+    name = "setWashInfo"
     get_command = GetMopWashFrequency
     _mqtt_params = MappingProxyType({"interval": InitParam(MopWashFrequency)})
 
